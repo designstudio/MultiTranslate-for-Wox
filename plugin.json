@@ -1,0 +1,262 @@
+{
+  "Id": "e1dfeb8d-6469-4762-8f3e-7c739f54cc12",
+  "Name": "MultiTranslate for Wox",
+  "Description": "Multi-provider translation for Wox. Google, Microsoft, DeepL and more. UI follows the Wox language automatically.",
+  "Author": "Lu-Jiejie (original translation adapters); Wox community port",
+  "Website": "https://github.com/Lu-Jiejie/flow-launcher-multi-translate",
+  "Version": "0.3.8",
+  "MinWoxVersion": "2.4.5",
+  "Runtime": "nodejs",
+  "Entry": "index.js",
+  "Icon": "relative:assets/icon.png",
+  "TriggerKeywords": [
+    "tr"
+  ],
+  "SupportedOS": [
+    "windows",
+    "linux",
+    "darwin"
+  ],
+  "SettingDefinitions": [
+    {
+      "Type": "select",
+      "Value": {
+        "Key": "translation_mode",
+        "Label": "i18n:mode_label",
+        "DefaultValue": "configured",
+        "Options": [
+          {
+            "Label": "i18n:mode_configured",
+            "Value": "configured"
+          },
+          {
+            "Label": "i18n:mode_zh_en",
+            "Value": "zh-en"
+          }
+        ]
+      }
+    },
+    {
+      "Type": "textbox",
+      "Value": {
+        "Key": "source_language",
+        "Label": "i18n:source_label",
+        "DefaultValue": "auto"
+      }
+    },
+    {
+      "Type": "textbox",
+      "Value": {
+        "Key": "target_language",
+        "Label": "i18n:target_label",
+        "DefaultValue": "pt_br"
+      }
+    },
+    {
+      "Type": "textbox",
+      "Value": {
+        "Key": "providers",
+        "Label": "i18n:providers_label",
+        "DefaultValue": "google",
+        "MaxLines": 10
+      }
+    },
+    {
+      "Type": "textbox",
+      "Value": {
+        "Key": "language_pairs",
+        "Label": "i18n:pairs_label",
+        "DefaultValue": "en>pt_br\npt_br>en",
+        "MaxLines": 8
+      }
+    },
+    {
+      "Type": "textbox",
+      "Value": {
+        "Key": "timeout_ms",
+        "Label": "i18n:timeout_label",
+        "DefaultValue": "12000"
+      }
+    },
+    {
+      "Type": "textbox",
+      "Value": {
+        "Key": "delay_ms",
+        "Label": "i18n:delay_label",
+        "DefaultValue": "300"
+      }
+    },
+    {
+      "Type": "textbox",
+      "Value": {
+        "Key": "deepl_key",
+        "Label": "i18n:deepl_key_label",
+        "DefaultValue": ""
+      }
+    },
+    {
+      "Type": "textbox",
+      "Value": {
+        "Key": "deeplx_url",
+        "Label": "i18n:deeplx_url_label",
+        "DefaultValue": ""
+      }
+    },
+    {
+      "Type": "textbox",
+      "Value": {
+        "Key": "mtran_url",
+        "Label": "i18n:mtran_url_label",
+        "DefaultValue": ""
+      }
+    },
+    {
+      "Type": "textbox",
+      "Value": {
+        "Key": "mtran_token",
+        "Label": "i18n:mtran_token_label",
+        "DefaultValue": ""
+      }
+    },
+    {
+      "Type": "textbox",
+      "Value": {
+        "Key": "openai_base_url",
+        "Label": "i18n:openai_base_url_label",
+        "DefaultValue": "https://api.openai.com/v1"
+      }
+    },
+    {
+      "Type": "textbox",
+      "Value": {
+        "Key": "openai_api_key",
+        "Label": "i18n:openai_api_key_label",
+        "DefaultValue": ""
+      }
+    },
+    {
+      "Type": "textbox",
+      "Value": {
+        "Key": "openai_model",
+        "Label": "i18n:openai_model_label",
+        "DefaultValue": "gpt-4o-mini"
+      }
+    },
+    {
+      "Type": "textbox",
+      "Value": {
+        "Key": "openai_system_prompt",
+        "Label": "i18n:openai_system_prompt_label",
+        "DefaultValue": ""
+      }
+    },
+    {
+      "Type": "textbox",
+      "Value": {
+        "Key": "openai_user_prompt",
+        "Label": "i18n:openai_user_prompt_label",
+        "DefaultValue": ""
+      }
+    },
+    {
+      "Type": "textbox",
+      "Value": {
+        "Key": "openai_language_names",
+        "Label": "i18n:openai_language_names_label",
+        "DefaultValue": ""
+      }
+    }
+  ],
+  "I18n": {
+    "en_US": {
+      "probe": "en_US",
+      "description": "Multi-provider translation for Wox. Google, Microsoft, DeepL and more. UI follows the Wox language automatically.",
+      "copy_translation": "Copy translation",
+      "copy_original": "Copy original",
+      "original": "Original text",
+      "provider": "Provider",
+      "direction": "Direction",
+      "auto": "Detect automatically",
+      "enter_copy": "Enter to copy",
+      "enter_text": "Enter text to translate",
+      "unsupported_language": "Unsupported language code",
+      "too_long": "Text too long",
+      "unknown_provider": "Unknown provider",
+      "translation_failed": "Translation failed",
+      "no_providers": "No translation providers selected",
+      "mode_label": "Translation mode",
+      "mode_configured": "Configured direction",
+      "mode_zh_en": "Chinese ↔ English (automatic)",
+      "source_label": "Source language code (auto, en, pt_br...)",
+      "target_label": "Target language code (pt_br, en, es...)",
+      "providers_label": "Translation providers (one per line)",
+      "pairs_label": "Quick language pairs (one per line)",
+      "timeout_label": "Request timeout (ms)",
+      "delay_label": "Translation delay (ms)",
+      "deepl_key_label": "DeepL API key (optional)",
+      "deeplx_url_label": "DeepLX URL (optional)",
+      "mtran_url_label": "MTranServer URL (optional)",
+      "mtran_token_label": "MTranServer token (optional)",
+      "openai_base_url_label": "OpenAI-compatible base URL",
+      "openai_api_key_label": "OpenAI-compatible API key (optional)",
+      "openai_model_label": "OpenAI-compatible model",
+      "openai_system_prompt_label": "Custom system prompt (optional)",
+      "openai_user_prompt_label": "Custom user prompt (use {text})",
+      "openai_language_names_label": "Custom language names JSON (optional)",
+      "choose_pair": "Choose language pair",
+      "settings_hint": "Edit languages and providers in plugin settings",
+      "unsupported_providers": "Available providers",
+      "no_provider_hint": "Open settings and add google, bing or deepl",
+      "error_limit": "Limit: 10,000 characters",
+      "instructions": "Type tr <text> · tr >en hello · tr en>pt_br hello",
+      "providers_hidden": "Providers hidden after repeated failures",
+      "show_again": "Show again",
+      "known_limits": "Known limitations"
+    },
+    "pt_BR": {
+      "probe": "pt_BR",
+      "description": "Traduza com Google, Bing, DeepL e outros serviços. A interface acompanha o idioma do Wox.",
+      "copy_translation": "Copiar tradução",
+      "copy_original": "Copiar texto original",
+      "original": "Texto original",
+      "provider": "Provedor",
+      "direction": "Idiomas",
+      "auto": "Detectar automaticamente",
+      "enter_copy": "Enter para copiar",
+      "enter_text": "Digite um texto para traduzir",
+      "unsupported_language": "Código de idioma não suportado",
+      "too_long": "Texto muito longo",
+      "unknown_provider": "Provedor desconhecido",
+      "translation_failed": "Falha na tradução",
+      "no_providers": "Nenhum provedor de tradução selecionado",
+      "mode_label": "Modo de tradução",
+      "mode_configured": "Direção configurada",
+      "mode_zh_en": "Chinês ↔ Inglês (automático)",
+      "source_label": "Idioma de origem (auto, en, pt_br...)",
+      "target_label": "Idioma de destino (pt_br, en, es...)",
+      "providers_label": "Serviços de tradução (um por linha)",
+      "pairs_label": "Pares rápidos de idiomas (um por linha)",
+      "timeout_label": "Tempo limite da requisição (ms)",
+      "delay_label": "Atraso antes de traduzir (ms)",
+      "deepl_key_label": "Chave de API do DeepL (opcional)",
+      "deeplx_url_label": "URL do DeepLX (opcional)",
+      "mtran_url_label": "URL do MTranServer (opcional)",
+      "mtran_token_label": "Token do MTranServer (opcional)",
+      "openai_base_url_label": "URL base de API compatível com OpenAI",
+      "openai_api_key_label": "Chave de API compatível com OpenAI (opcional)",
+      "openai_model_label": "Modelo compatível com OpenAI",
+      "openai_system_prompt_label": "Prompt de sistema personalizado (opcional)",
+      "openai_user_prompt_label": "Prompt de usuário personalizado (use {text})",
+      "openai_language_names_label": "Nomes de idiomas personalizados em JSON (opcional)",
+      "choose_pair": "Escolher par de idiomas",
+      "settings_hint": "Altere idiomas e serviços nas configurações do plugin",
+      "unsupported_providers": "Provedores disponíveis",
+      "no_provider_hint": "Abra as configurações e adicione google, bing ou deepl",
+      "error_limit": "Limite: 10.000 caracteres",
+      "instructions": "Digite tr <texto> · tr >en olá · tr en>pt_br hello",
+      "providers_hidden": "Provedores ocultos após falhas repetidas",
+      "show_again": "Reexibir",
+      "known_limits": "Limitações conhecidas"
+    }
+  }
+}
