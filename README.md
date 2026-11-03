@@ -87,6 +87,12 @@ Mocked tests prove the parsing/error logic; only `test-live.js` proves a provide
 - v0.3.1 — minimal result UI with side preview.
 - v0.3.0 — Wox interface language localization (en_US / pt_BR).
 
+## Security note
+
+This plugin contains **no credentials**. User-provided keys (`deepl_key`, `openai_api_key`, `mtran_token`…) live only in the Wox plugin settings and are never hardcoded or logged.
+
+A few hardcoded identifiers (e.g. the WeChat mini-program AppID `wxb1070eabc6f9107e` in the Tencent `Referer` header) are **public protocol constants** required by the unofficial endpoints. They are inherited verbatim from the upstream [flow-launcher-multi-translate](https://github.com/Lu-Jiejie/flow-launcher-multi-translate) project, are public by design, and grant no access on their own. GitHub secret scanning may flag the WeChat AppID pattern — that alert is a false positive.
+
 ## Credits & license
 
 Original translation adapters and design: **Lu-Jiejie** (2024), MIT — see [LICENSE](LICENSE). Wox 2 adapter, provider fixes, tests and packaging: community contribution. Please retain the attribution when distributing.
